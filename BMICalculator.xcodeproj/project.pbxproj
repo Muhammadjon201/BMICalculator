@@ -3,29 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8A8D8CD32B35C1F100AEE529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CD22B35C1F100AEE529 /* AppDelegate.swift */; };
 		8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CD42B35C1F100AEE529 /* SceneDelegate.swift */; };
-		8A8D8CD72B35C1F100AEE529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CD62B35C1F100AEE529 /* ViewController.swift */; };
-		8A8D8CDA2B35C1F100AEE529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8CD82B35C1F100AEE529 /* Main.storyboard */; };
 		8A8D8CDD2B35C1F100AEE529 /* BMICalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CDB2B35C1F100AEE529 /* BMICalculator.xcdatamodeld */; };
 		8A8D8CDF2B35C1F200AEE529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8CDE2B35C1F200AEE529 /* Assets.xcassets */; };
-		8A8D8CE22B35C1F200AEE529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8CE02B35C1F200AEE529 /* LaunchScreen.storyboard */; };
+		8A8D8D012B35C25400AEE529 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF12B35C25400AEE529 /* Constants.swift */; };
+		8A8D8D022B35C25400AEE529 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF42B35C25400AEE529 /* OnboardingViewModel.swift */; };
+		8A8D8D032B35C25400AEE529 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF72B35C25400AEE529 /* OnboardingViewController.swift */; };
+		8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF92B35C25400AEE529 /* UIColor.swift */; };
+		8A8D8D052B35C25400AEE529 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFA2B35C25400AEE529 /* String.swift */; };
+		8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFB2B35C25400AEE529 /* UIFont.swift */; };
+		8A8D8D072B35C25400AEE529 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFD2B35C25400AEE529 /* Urbanist-Bold.ttf */; };
+		8A8D8D082B35C25400AEE529 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFE2B35C25400AEE529 /* Urbanist-Regular.ttf */; };
+		8A8D8D092B35C25400AEE529 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFF2B35C25400AEE529 /* Urbanist-SemiBold.ttf */; };
+		8A8D8D0A2B35C25400AEE529 /* Urbanist-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8D002B35C25400AEE529 /* Urbanist-Medium.ttf */; };
+		D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A59F2B36C98000DED5FA /* SnapKit */; };
+		D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */; };
+		D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB21992B384B8700CADF08 /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A8D8CCF2B35C1F100AEE529 /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8D8CD22B35C1F100AEE529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8D8CD42B35C1F100AEE529 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A8D8CD62B35C1F100AEE529 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8A8D8CD92B35C1F100AEE529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A8D8CDC2B35C1F100AEE529 /* BMICalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BMICalculator.xcdatamodel; sourceTree = "<group>"; };
 		8A8D8CDE2B35C1F200AEE529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A8D8CE12B35C1F200AEE529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A8D8CE32B35C1F200AEE529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A8D8CF12B35C25400AEE529 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A8D8CF42B35C25400AEE529 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		8A8D8CF72B35C25400AEE529 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8A8D8CF92B35C25400AEE529 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8A8D8CFA2B35C25400AEE529 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8A8D8CFB2B35C25400AEE529 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		8A8D8CFD2B35C25400AEE529 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
+		8A8D8CFE2B35C25400AEE529 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
+		8A8D8CFF2B35C25400AEE529 /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBold.ttf"; sourceTree = "<group>"; };
+		8A8D8D002B35C25400AEE529 /* Urbanist-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Medium.ttf"; sourceTree = "<group>"; };
+		D5DB21992B384B8700CADF08 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */,
+				D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +78,88 @@
 		8A8D8CD12B35C1F100AEE529 /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
-				8A8D8CD22B35C1F100AEE529 /* AppDelegate.swift */,
-				8A8D8CD42B35C1F100AEE529 /* SceneDelegate.swift */,
-				8A8D8CD62B35C1F100AEE529 /* ViewController.swift */,
-				8A8D8CD82B35C1F100AEE529 /* Main.storyboard */,
+				8A8D8CE92B35C21200AEE529 /* Support */,
+				8A8D8CF22B35C25400AEE529 /* Onboarding */,
+				8A8D8CF82B35C25400AEE529 /* Extensions */,
+				8A8D8CF02B35C25400AEE529 /* Helper */,
 				8A8D8CDE2B35C1F200AEE529 /* Assets.xcassets */,
-				8A8D8CE02B35C1F200AEE529 /* LaunchScreen.storyboard */,
 				8A8D8CE32B35C1F200AEE529 /* Info.plist */,
 				8A8D8CDB2B35C1F100AEE529 /* BMICalculator.xcdatamodeld */,
 			);
 			path = BMICalculator;
+			sourceTree = "<group>";
+		};
+		8A8D8CE92B35C21200AEE529 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CD22B35C1F100AEE529 /* AppDelegate.swift */,
+				8A8D8CD42B35C1F100AEE529 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		8A8D8CF02B35C25400AEE529 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CF12B35C25400AEE529 /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8A8D8CF22B35C25400AEE529 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CF32B35C25400AEE529 /* ViewModel */,
+				8A8D8CF52B35C25400AEE529 /* Model */,
+				8A8D8CF62B35C25400AEE529 /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8A8D8CF32B35C25400AEE529 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CF42B35C25400AEE529 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8A8D8CF52B35C25400AEE529 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A8D8CF62B35C25400AEE529 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CF72B35C25400AEE529 /* OnboardingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A8D8CF82B35C25400AEE529 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CFC2B35C25400AEE529 /* Fonts */,
+				8A8D8CF92B35C25400AEE529 /* UIColor.swift */,
+				8A8D8CFA2B35C25400AEE529 /* String.swift */,
+				8A8D8CFB2B35C25400AEE529 /* UIFont.swift */,
+				D5DB21992B384B8700CADF08 /* UIButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A8D8CFC2B35C25400AEE529 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D8CFD2B35C25400AEE529 /* Urbanist-Bold.ttf */,
+				8A8D8CFE2B35C25400AEE529 /* Urbanist-Regular.ttf */,
+				8A8D8CFF2B35C25400AEE529 /* Urbanist-SemiBold.ttf */,
+				8A8D8D002B35C25400AEE529 /* Urbanist-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +178,10 @@
 			dependencies = (
 			);
 			name = BMICalculator;
+			packageProductDependencies = (
+				D5B8A59F2B36C98000DED5FA /* SnapKit */,
+				D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */,
+			);
 			productName = BMICalculator;
 			productReference = 8A8D8CCF2B35C1F100AEE529 /* BMICalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -106,7 +202,7 @@
 				};
 			};
 			buildConfigurationList = 8A8D8CCA2B35C1F100AEE529 /* Build configuration list for PBXProject "BMICalculator" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -114,6 +210,9 @@
 				Base,
 			);
 			mainGroup = 8A8D8CC62B35C1F100AEE529;
+			packageReferences = (
+				D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8A8D8CD02B35C1F100AEE529 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,9 +227,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A8D8CE22B35C1F200AEE529 /* LaunchScreen.storyboard in Resources */,
 				8A8D8CDF2B35C1F200AEE529 /* Assets.xcassets in Resources */,
-				8A8D8CDA2B35C1F100AEE529 /* Main.storyboard in Resources */,
+				8A8D8D092B35C25400AEE529 /* Urbanist-SemiBold.ttf in Resources */,
+				8A8D8D072B35C25400AEE529 /* Urbanist-Bold.ttf in Resources */,
+				8A8D8D0A2B35C25400AEE529 /* Urbanist-Medium.ttf in Resources */,
+				8A8D8D082B35C25400AEE529 /* Urbanist-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,33 +242,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A8D8D022B35C25400AEE529 /* OnboardingViewModel.swift in Sources */,
+				8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */,
+				8A8D8D032B35C25400AEE529 /* OnboardingViewController.swift in Sources */,
 				8A8D8CDD2B35C1F100AEE529 /* BMICalculator.xcdatamodeld in Sources */,
-				8A8D8CD72B35C1F100AEE529 /* ViewController.swift in Sources */,
 				8A8D8CD32B35C1F100AEE529 /* AppDelegate.swift in Sources */,
+				D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */,
 				8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */,
+				8A8D8D052B35C25400AEE529 /* String.swift in Sources */,
+				8A8D8D012B35C25400AEE529 /* Constants.swift in Sources */,
+				8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8A8D8CD82B35C1F100AEE529 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A8D8CD92B35C1F100AEE529 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8A8D8CE02B35C1F200AEE529 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A8D8CE12B35C1F200AEE529 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A8D8CE42B35C1F200AEE529 /* Debug */ = {
@@ -222,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -279,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -296,14 +384,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5PZ9NLSBU;
+				DEVELOPMENT_TEAM = SQB47CP5D4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,14 +412,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N5PZ9NLSBU;
+				DEVELOPMENT_TEAM = SQB47CP5D4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,6 +455,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5B8A59F2B36C98000DED5FA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8A8D8CDB2B35C1F100AEE529 /* BMICalculator.xcdatamodeld */ = {
