@@ -21,6 +21,7 @@
 		D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A59F2B36C98000DED5FA /* SnapKit */; };
 		D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */; };
 		D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB21992B384B8700CADF08 /* UIButton.swift */; };
+		D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8A8D8CFA2B35C25400AEE529 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8A8D8CFB2B35C25400AEE529 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		D5DB21992B384B8700CADF08 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				8A8D8CF72B35C25400AEE529 /* OnboardingViewController.swift */,
+				D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				8A63F75D2B3876C8000F1A03 /* Calculation.swift in Sources */,
 				8A8D8D032B35C25400AEE529 /* OnboardingViewController.swift in Sources */,
 				8A8D8CDD2B35C1F100AEE529 /* BMICalculator.xcdatamodeld in Sources */,
+				D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */,
 				8A8D8CD32B35C1F100AEE529 /* AppDelegate.swift in Sources */,
 				D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */,
 				8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */,

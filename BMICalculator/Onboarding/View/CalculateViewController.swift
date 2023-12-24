@@ -6,24 +6,42 @@
 //
 
 import UIKit
+import SnapKit
 
 class CalculateViewController: UIViewController {
+    
+    let appNameAttText = NSMutableAttributedString()
+    
+    private let appName: UILabel = {
+        let label = UILabel()
+        label.textColor = .cBlack
+        label.text = "BMI Calculator"
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        appNameConfig()
+        
+        [appName].forEach { item in
+            view.addSubview(item)
+        }
+        layout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func appNameConfig(){
+        appNameAttText.normal("BMI", textColor: .primary, font: .setFont(forTextStyle: .title3, weight: .bold))
+        appNameAttText.normal("Calculator", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .medium), space: " ")
+        self.appName.attributedText = appNameAttText
     }
-    */
-
+    
+    private func layout(){
+        appName.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.left.equalToSuperview().offset(Constants.sidePadding)
+        }
+    }
+    
 }
