@@ -5,9 +5,12 @@
 //  Created by Narzullaev Nurbek on 22/12/23.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
+    static let screenHeight: CGFloat = UIScreen.main.bounds.size.height
+    static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
     static let topPadding: CGFloat = 20
     static let sidePadding: CGFloat = 15
+    static let buttonHeight: CGFloat = 50 // used for text fields as well
 }

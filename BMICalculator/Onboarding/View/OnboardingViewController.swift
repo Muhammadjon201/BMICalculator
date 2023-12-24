@@ -15,14 +15,14 @@ protocol OnboardingViewModelType {
 class OnboardingViewController: UIViewController {
     
     var viewModel: OnboardingViewModelType = OnboardingViewModel()
-    let attributedText = NSMutableAttributedString()
-    let fonts = Fonts()
+    let appNameAttText = NSMutableAttributedString()
+    let taglineAttText = NSMutableAttributedString()
     
     private let appName: UILabel = {
-        let appName = UILabel()
-        appName.textColor = .cBlack
-        appName.text = "BMI Calculator"
-        return appName
+        let label = UILabel()
+        label.textColor = .cBlack
+        label.text = "BMI Calculator"
+        return label
     }()
     
     private let lowerView: UIView = {
@@ -35,11 +35,11 @@ class OnboardingViewController: UIViewController {
     }()
     
     private let onboardImage: UIImageView = {
-        let img = UIImageView()
-        img.image = UIImage(named: "biker")
-        img.contentMode = .scaleToFill
-        img.clipsToBounds = true
-        return img
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "biker")
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
     }()
     
     private let startButton: UIButton = {
@@ -51,40 +51,56 @@ class OnboardingViewController: UIViewController {
         view.backgroundColor = .white
         return view
     }()
+    
+    private let tagline: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 3
+        label.lineBreakMode = .byWordWrapping
+        return label
+    }()
+    
+    private let subHeadline: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
+        label.text = "Easily calculate your Body Mass Index (BMI) by entering your height and width."
+        label.textColor = .white
+        label.font = .setFont(forTextStyle: .callout, weight: .regular)
+        return label
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        [appName, onboardImage, lowerView].forEach { item in
+            view.addSubview(item)
+        }
+        
+        [tagline, subHeadline, startButton, lineView].forEach { item in
+            lowerView.addSubview(item)
+        }
+        
         appNameConfig()
-        view.addSubview(appName)
-        view.addSubview(lowerView)
-        view.addSubview(onboardImage)
-        lowerView.addSubview(startButton)
-        lowerView.addSubview(lineView)
         layout()
         
     }
     
     private func appNameConfig() {
-//        attributedText.normal("BMI", textColor: .primary, font: .setFont(forTextStyle: .title3, weight: .bold))
-//        attributedText.normal("Calculator", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .medium), space: " ")
-//        self.appName.attributedText = attributedText
+        appNameAttText.normal("BMI", textColor: .primary, font: .setFont(forTextStyle: .title3, weight: .bold))
+        appNameAttText.normal("Calculator", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .medium), space: " ")
+        self.appName.attributedText = appNameAttText
         
-        if let urbanianBoldFont = UIFont(name: fonts.urbanianBold, size: 20),
-           let urbanianSemiboldFont = UIFont(name: fonts.urbanianSemibold, size: 16) {
-
-            let attributedText = NSMutableAttributedString(string: "BMI ", attributes: [NSAttributedString.Key.font: urbanianBoldFont])
-            attributedText.append(NSAttributedString(string: "calculator", attributes: [NSAttributedString.Key.font: urbanianSemiboldFont]))
-
-        } else {
-            print("One or more fonts not found.")
-        }
+        taglineAttText.normal("Unveiling the Secrets", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .bold))
+        taglineAttText.normal("of Your Body's Balance!", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .medium), space: " ")
+        self.tagline.attributedText = taglineAttText
     }
     
     private func layout() {
         appName.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.topPadding)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.equalToSuperview().offset(Constants.sidePadding)
         }
 
@@ -101,11 +117,23 @@ class OnboardingViewController: UIViewController {
             make.height.equalToSuperview().multipliedBy(0.4)
         }
         
+        tagline.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(Constants.topPadding)
+            make.leading.equalToSuperview().offset(Constants.sidePadding)
+            make.trailing.equalToSuperview().offset(Calculation.setHeight(-120))
+        }
+        
+        subHeadline.snp.makeConstraints { make in
+            make.bottom.equalTo(lineView.snp.top).offset(-Constants.topPadding)
+            make.leading.equalTo(tagline.snp.leading)
+            make.trailing.equalToSuperview().offset(-Constants.sidePadding)
+        }
+        
         startButton.snp.makeConstraints { make in
-            make.bottom.equalTo(-25)
+            make.bottom.equalToSuperview().offset(-Calculation.setHeight(25))
             make.left.equalTo(10)
             make.right.equalTo(-10)
-            make.height.equalTo(40)
+            make.height.equalTo(Calculation.setHeight(Constants.buttonHeight))
         }
         
         lineView.snp.makeConstraints { make in
