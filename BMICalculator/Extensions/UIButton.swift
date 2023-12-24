@@ -11,6 +11,7 @@ extension UIButton {
     class func customButton(title: String, titleColor: UIColor = .white, backgroundColor: UIColor = .blue, cornerRadius: CGFloat = 8, target: Any?, action: Selector) -> UIButton {
         let button = UIButton()
         button.setTitle(title, for: .normal)
+        button.titleLabel?.font = .setFont(forTextStyle: .body, weight: .semibold)
         button.setTitleColor(titleColor, for: .normal)
         button.backgroundColor = backgroundColor
         button.layer.cornerRadius = cornerRadius
