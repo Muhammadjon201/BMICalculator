@@ -121,5 +121,10 @@ extension StepperTextField: UITextFieldDelegate {
         self.decrementButton.disabled()
         self.incrementButton.disabled()
     }
+    
+    func emptyError() {
+        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.borderWidth = 1
+    }
 }
 

@@ -8,8 +8,14 @@
 import UIKit
 import SnapKit
 
+protocol CalculateViewModelType {
+    func saveUserToDB(name: String, age: String, gender: Gender, height: String, weight: String)
+    func selectUser()
+}
+
 class CalculateViewController: UIViewController {
     
+    var viewModel: CalculateViewModelType = CalculateViewModel()
     let appNameAttText = NSMutableAttributedString()
     
     private let appName: UILabel = {
@@ -39,13 +45,7 @@ class CalculateViewController: UIViewController {
         return textfield
     }()
     
-    private let addressTextField: CustomTextField = {
-        let textfield = CustomTextField(title: "Address")
-        textfield.backgroundColor = .systemGray6
-        return textfield
-    }()
-    
-    private let birthTextField: CustomTextField = {
+    private let ageTextField: CustomTextField = {
         let textfield = CustomTextField(title: "Date of Birth")
         textfield.backgroundColor = .systemGray6
         return textfield
@@ -70,6 +70,16 @@ class CalculateViewController: UIViewController {
         return textfield
     }()
     
+    private let confirmButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .primary
+        button.layer.cornerRadius = 10
+        button.setTitle("Calculate BMI", for: .normal)
+        button.addTarget(self, action: #selector(confirmDidClick), for: .touchUpInside)
+        button.titleLabel?.font = .setFont(forTextStyle: .body, weight: .bold)
+        return button
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,16 +90,18 @@ class CalculateViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
         
-        [nameTextField, birthTextField, genderPicker, heightTextField, weightTextField].forEach { item in
+        [nameTextField, ageTextField, genderPicker, heightTextField, weightTextField, confirmButton].forEach { item in
             stackView.addArrangedSubview(item)
         }
         
         layout()
+        
+        viewModel.selectUser()
     }
     
     private func appNameConfig(){
         view.addSubview(appName)
-        appNameAttText.normal("BMI", textColor: .primary, font: .setFont(forTextStyle: .title3, weight: .bold))
+        appNameAttText.normal("BMI", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .heavy))
         appNameAttText.normal("Calculator", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .medium), space: " ")
         self.appName.attributedText = appNameAttText
     }
@@ -124,13 +136,7 @@ class CalculateViewController: UIViewController {
             make.height.equalTo(Constants.buttonHeight)
         }
         
-//        addressTextField.snp.makeConstraints { make in
-//            make.leading.equalToSuperview().offset(Constants.sidePadding)
-//            make.trailing.equalToSuperview().offset(-Constants.sidePadding)
-//            make.height.equalTo(Constants.buttonHeight)
-//        }
-        
-        birthTextField.snp.makeConstraints { make in
+        ageTextField.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(Constants.sidePadding)
             make.trailing.equalToSuperview().offset(-Constants.sidePadding)
             make.height.equalTo(Constants.buttonHeight)
@@ -154,11 +160,61 @@ class CalculateViewController: UIViewController {
             make.height.equalTo(Constants.buttonHeight)
         }
         
+        confirmButton.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(Constants.sidePadding)
+            make.trailing.equalToSuperview().offset(-Constants.sidePadding)
+            make.height.equalTo(Constants.buttonHeight)
+        }
+        
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+}
+
+
+extension CalculateViewController {
+    
+    @objc
+    func confirmDidClick() {
+        guard let name = self.nameTextField.text else { return }
+        guard let age = self.ageTextField.text else { return }
+        guard let height = self.heightTextField.text else { return }
+        guard let weight = self.weightTextField.text else { return }
+        let gender = self.genderPicker.selectedGender
+        
+        if name.isEmpty {
+            self.nameTextField.emptyError()
+        }
+        if age.isEmpty {
+            self.ageTextField.emptyError()
+        }
+        if height == "0" {
+            self.heightTextField.emptyError()
+        }
+        if weight == "0" {
+            self.weightTextField.emptyError()
+        }
+        if gender == nil {
+            self.genderPicker.emptyError()
+        }
+        
+        if name.isEmpty == false &&
+        age.isEmpty == false &&
+        height != "0" &&
+        weight != "0" &&
+        gender != nil {
+            viewModel.saveUserToDB(
+                name: name,
+                age: age,
+                gender: gender!,
+                height: height,
+                weight: weight)
+        }
+        
     }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A5B049D2B4070B80049C6C6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B049C2B4070B80049C6C6 /* MainViewController.swift */; };
+		8A5B04A22B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B04A12B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift */; };
 		8A63F75D2B3876C8000F1A03 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A63F75C2B3876C8000F1A03 /* Calculation.swift */; };
 		8A8D8CD32B35C1F100AEE529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CD22B35C1F100AEE529 /* AppDelegate.swift */; };
 		8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CD42B35C1F100AEE529 /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 		8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF92B35C25400AEE529 /* UIColor.swift */; };
 		8A8D8D052B35C25400AEE529 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFA2B35C25400AEE529 /* String.swift */; };
 		8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFB2B35C25400AEE529 /* UIFont.swift */; };
+		8AAF89802B405D2900B4EBDA /* CoreDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF897F2B405D2900B4EBDA /* CoreDB.swift */; };
+		8AAF89822B40600800B4EBDA /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF89812B40600800B4EBDA /* CalculateViewModel.swift */; };
 		8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F02B3A987500F76743 /* CustomTextField.swift */; };
 		8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F22B3A999C00F76743 /* UITextField.swift */; };
 		8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */; };
@@ -29,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A5B049C2B4070B80049C6C6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8A5B04A12B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionPersonViewCell.swift; sourceTree = "<group>"; };
 		8A63F75C2B3876C8000F1A03 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		8A8D8CCF2B35C1F100AEE529 /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8D8CD22B35C1F100AEE529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +48,8 @@
 		8A8D8CF92B35C25400AEE529 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8A8D8CFA2B35C25400AEE529 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8A8D8CFB2B35C25400AEE529 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		8AAF897F2B405D2900B4EBDA /* CoreDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDB.swift; sourceTree = "<group>"; };
+		8AAF89812B40600800B4EBDA /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
 		8ADC62F02B3A987500F76743 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8ADC62F22B3A999C00F76743 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTextField.swift; sourceTree = "<group>"; };
@@ -63,6 +71,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A5B04982B4070880049C6C6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B04992B4070960049C6C6 /* Model */,
+				8A5B049A2B40709A0049C6C6 /* View */,
+				8A5B049B2B40709E0049C6C6 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8A5B04992B4070960049C6C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A5B049A2B40709A0049C6C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B049E2B40727F0049C6C6 /* Cells */,
+				8A5B049C2B4070B80049C6C6 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A5B049B2B40709E0049C6C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8A5B049E2B40727F0049C6C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A5B04A12B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		8A63F75B2B38754D000F1A03 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,10 +138,12 @@
 		8A8D8CD12B35C1F100AEE529 /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
-				8ADC62EB2B3A977F00F76743 /* Calculate */,
 				8A8D8CE92B35C21200AEE529 /* Support */,
 				8A8D8CF22B35C25400AEE529 /* Onboarding */,
+				8ADC62EB2B3A977F00F76743 /* Calculate */,
+				8A5B04982B4070880049C6C6 /* Main */,
 				8A8D8CF82B35C25400AEE529 /* Extensions */,
+				8AAF897E2B405D1000B4EBDA /* Database */,
 				8A8D8CF02B35C25400AEE529 /* Helper */,
 				8A8D8CDE2B35C1F200AEE529 /* Assets.xcassets */,
 				8A8D8CE32B35C1F200AEE529 /* Info.plist */,
@@ -158,6 +209,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8AAF897E2B405D1000B4EBDA /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				8AAF897F2B405D2900B4EBDA /* CoreDB.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		8ADC62EB2B3A977F00F76743 /* Calculate */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +230,7 @@
 		8ADC62EC2B3A978E00F76743 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8AAF89812B40600800B4EBDA /* CalculateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,16 +340,20 @@
 				8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */,
 				8A8D8D022B35C25400AEE529 /* OnboardingViewModel.swift in Sources */,
 				8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */,
+				8A8D8D052B35C25400AEE529 /* String.swift in Sources */,
+				8A5B049D2B4070B80049C6C6 /* MainViewController.swift in Sources */,
 				8A63F75D2B3876C8000F1A03 /* Calculation.swift in Sources */,
 				8A8D8D032B35C25400AEE529 /* OnboardingViewController.swift in Sources */,
 				8A8D8CDD2B35C1F100AEE529 /* BMICalculator.xcdatamodeld in Sources */,
 				D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */,
 				8A8D8CD32B35C1F100AEE529 /* AppDelegate.swift in Sources */,
 				D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */,
+				8AAF89802B405D2900B4EBDA /* CoreDB.swift in Sources */,
 				8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */,
 				8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */,
-				8A8D8D052B35C25400AEE529 /* String.swift in Sources */,
 				8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */,
+				8A5B04A22B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift in Sources */,
+				8AAF89822B40600800B4EBDA /* CalculateViewModel.swift in Sources */,
 				8A8D8D012B35C25400AEE529 /* Constants.swift in Sources */,
 				8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */,
 			);

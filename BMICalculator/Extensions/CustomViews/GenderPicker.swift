@@ -8,7 +8,14 @@
 import UIKit
 import SnapKit
 
+enum Gender {
+    case male
+    case female
+}
+
 class GenderPicker: UIView {
+    
+    var selectedGender: Gender?
     
     private let titleLabel: UILabel = {
         let titleLabel = UILabel()
@@ -88,6 +95,7 @@ class GenderPicker: UIView {
     func maleSelect() {
         femaleImageView.layer.borderWidth = 0
         maleImageView.layer.borderWidth = 2
+        self.selectedGender = .male
     }
     
     
@@ -95,6 +103,13 @@ class GenderPicker: UIView {
     func femaleSelect() {
         maleImageView.layer.borderWidth = 0
         femaleImageView.layer.borderWidth = 2
+        self.selectedGender = .female
+    }
+    
+    
+    func emptyError() {
+        self.layer.borderColor = UIColor.red.cgColor
+        self.layer.borderWidth = 1
     }
     
     
