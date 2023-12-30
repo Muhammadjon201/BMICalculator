@@ -80,7 +80,7 @@ class CalculateViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
         
-        [nameTextField, addressTextField, birthTextField, genderPicker, heightTextField, weightTextField].forEach { item in
+        [nameTextField, birthTextField, genderPicker, heightTextField, weightTextField].forEach { item in
             stackView.addArrangedSubview(item)
         }
         
@@ -124,11 +124,11 @@ class CalculateViewController: UIViewController {
             make.height.equalTo(Constants.buttonHeight)
         }
         
-        addressTextField.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(Constants.sidePadding)
-            make.trailing.equalToSuperview().offset(-Constants.sidePadding)
-            make.height.equalTo(Constants.buttonHeight)
-        }
+//        addressTextField.snp.makeConstraints { make in
+//            make.leading.equalToSuperview().offset(Constants.sidePadding)
+//            make.trailing.equalToSuperview().offset(-Constants.sidePadding)
+//            make.height.equalTo(Constants.buttonHeight)
+//        }
         
         birthTextField.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(Constants.sidePadding)
