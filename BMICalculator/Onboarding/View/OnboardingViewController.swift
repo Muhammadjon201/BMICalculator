@@ -68,8 +68,6 @@ class OnboardingViewController: UIViewController {
         label.font = .setFont(forTextStyle: .callout, weight: .regular)
         return label
     }()
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +92,7 @@ class OnboardingViewController: UIViewController {
         self.appName.attributedText = appNameAttText
         
         taglineAttText.normal("Unveiling the Secrets", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .bold))
-        taglineAttText.normal("of Your Body's Balance!", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .medium), space: " ")
+        taglineAttText.normal("of Your Body's Balance!", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .regular), space: " ")
         self.tagline.attributedText = taglineAttText
     }
     
@@ -148,7 +146,8 @@ class OnboardingViewController: UIViewController {
     //MARK: - Actions
     
     @objc func getStartedPressed() {
-        print("working fine")
+        let vc = CalculateViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

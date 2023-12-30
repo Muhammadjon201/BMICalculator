@@ -19,4 +19,11 @@ extension UIButton {
         return button
     }
     
+    func disabled() {
+        self.isUserInteractionEnabled = false
+    }
+    
+    func enabled() {
+        self.isUserInteractionEnabled = true
+    }
 }

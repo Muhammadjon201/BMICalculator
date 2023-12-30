@@ -18,9 +18,14 @@
 		8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF92B35C25400AEE529 /* UIColor.swift */; };
 		8A8D8D052B35C25400AEE529 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFA2B35C25400AEE529 /* String.swift */; };
 		8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFB2B35C25400AEE529 /* UIFont.swift */; };
+		8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F02B3A987500F76743 /* CustomTextField.swift */; };
+		8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F22B3A999C00F76743 /* UITextField.swift */; };
+		8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */; };
+		8ADC62F72B3AA60600F76743 /* GenderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F62B3AA60600F76743 /* GenderPicker.swift */; };
 		D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A59F2B36C98000DED5FA /* SnapKit */; };
 		D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */; };
 		D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB21992B384B8700CADF08 /* UIButton.swift */; };
+		D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +42,12 @@
 		8A8D8CF92B35C25400AEE529 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8A8D8CFA2B35C25400AEE529 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8A8D8CFB2B35C25400AEE529 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		8ADC62F02B3A987500F76743 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		8ADC62F22B3A999C00F76743 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTextField.swift; sourceTree = "<group>"; };
+		8ADC62F62B3AA60600F76743 /* GenderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPicker.swift; sourceTree = "<group>"; };
 		D5DB21992B384B8700CADF08 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		8A8D8CD12B35C1F100AEE529 /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
+				8ADC62EB2B3A977F00F76743 /* Calculate */,
 				8A8D8CE92B35C21200AEE529 /* Support */,
 				8A8D8CF22B35C25400AEE529 /* Onboarding */,
 				8A8D8CF82B35C25400AEE529 /* Extensions */,
@@ -137,12 +148,56 @@
 		8A8D8CF82B35C25400AEE529 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8ADC62EF2B3A986700F76743 /* CustomViews */,
 				8A8D8CF92B35C25400AEE529 /* UIColor.swift */,
 				8A8D8CFA2B35C25400AEE529 /* String.swift */,
 				8A8D8CFB2B35C25400AEE529 /* UIFont.swift */,
 				D5DB21992B384B8700CADF08 /* UIButton.swift */,
+				8ADC62F22B3A999C00F76743 /* UITextField.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8ADC62EB2B3A977F00F76743 /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				8ADC62ED2B3A979300F76743 /* Model */,
+				8ADC62EE2B3A979700F76743 /* View */,
+				8ADC62EC2B3A978E00F76743 /* ViewModel */,
+			);
+			path = Calculate;
+			sourceTree = "<group>";
+		};
+		8ADC62EC2B3A978E00F76743 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8ADC62ED2B3A979300F76743 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8ADC62EE2B3A979700F76743 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8ADC62EF2B3A986700F76743 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8ADC62F02B3A987500F76743 /* CustomTextField.swift */,
+				8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */,
+				8ADC62F62B3AA60600F76743 /* GenderPicker.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,15 +276,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADC62F72B3AA60600F76743 /* GenderPicker.swift in Sources */,
+				8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */,
 				8A8D8D022B35C25400AEE529 /* OnboardingViewModel.swift in Sources */,
 				8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */,
 				8A63F75D2B3876C8000F1A03 /* Calculation.swift in Sources */,
 				8A8D8D032B35C25400AEE529 /* OnboardingViewController.swift in Sources */,
 				8A8D8CDD2B35C1F100AEE529 /* BMICalculator.xcdatamodeld in Sources */,
+				D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */,
 				8A8D8CD32B35C1F100AEE529 /* AppDelegate.swift in Sources */,
 				D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */,
+				8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */,
 				8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */,
 				8A8D8D052B35C25400AEE529 /* String.swift in Sources */,
+				8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */,
 				8A8D8D012B35C25400AEE529 /* Constants.swift in Sources */,
 				8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */,
 			);

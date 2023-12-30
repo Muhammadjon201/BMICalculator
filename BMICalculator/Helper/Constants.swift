@@ -12,5 +12,7 @@ struct Constants {
     static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
     static let topPadding: CGFloat = 20
     static let sidePadding: CGFloat = 15
+    static let minorPadding: CGFloat = 8
+    static let largePadding: CGFloat = 40
     static let buttonHeight: CGFloat = 50 // used for text fields as well
 }
