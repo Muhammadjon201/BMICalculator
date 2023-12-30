@@ -87,7 +87,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private func appNameConfig() {
-        appNameAttText.normal("BMI", textColor: .primary, font: .setFont(forTextStyle: .title3, weight: .bold))
+        appNameAttText.normal("BMI", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .heavy))
         appNameAttText.normal("Calculator", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .medium), space: " ")
         self.appName.attributedText = appNameAttText
         
