@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A3D6EEA2B43007000C57281 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6EE82B42F70B00C57281 /* MainViewModel.swift */; };
+		8A3D6EEC2B4300B700C57281 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D6EEB2B4300B700C57281 /* Double.swift */; };
 		8A5B049D2B4070B80049C6C6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B049C2B4070B80049C6C6 /* MainViewController.swift */; };
 		8A5B04A22B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5B04A12B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift */; };
 		8A63F75D2B3876C8000F1A03 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A63F75C2B3876C8000F1A03 /* Calculation.swift */; };
@@ -26,9 +28,8 @@
 		8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F22B3A999C00F76743 /* UITextField.swift */; };
 		8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */; };
 		8ADC62F72B3AA60600F76743 /* GenderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F62B3AA60600F76743 /* GenderPicker.swift */; };
-		D5B070DD2B4169C500DA2D34 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DC2B4169C500DA2D34 /* MainViewModel.swift */; };
+		D5B070DD2B4169C500DA2D34 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DC2B4169C500DA2D34 /* MainModel.swift */; };
 		D5B070DF2B41866D00DA2D34 /* MainResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DE2B41866D00DA2D34 /* MainResultCell.swift */; };
-		D5B070E12B41872100DA2D34 /* BmiResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070E02B41872100DA2D34 /* BmiResultModel.swift */; };
 		D5B070E32B41945C00DA2D34 /* AboutBMIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070E22B41945C00DA2D34 /* AboutBMIController.swift */; };
 		D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A59F2B36C98000DED5FA /* SnapKit */; };
 		D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A3D6EE82B42F70B00C57281 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8A3D6EEB2B4300B700C57281 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		8A5B049C2B4070B80049C6C6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8A5B04A12B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionPersonViewCell.swift; sourceTree = "<group>"; };
 		8A63F75C2B3876C8000F1A03 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
@@ -58,9 +61,8 @@
 		8ADC62F22B3A999C00F76743 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTextField.swift; sourceTree = "<group>"; };
 		8ADC62F62B3AA60600F76743 /* GenderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPicker.swift; sourceTree = "<group>"; };
-		D5B070DC2B4169C500DA2D34 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = BMICalculator/Onboarding/View/MainViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D5B070DC2B4169C500DA2D34 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainModel.swift; path = BMICalculator/Onboarding/View/MainModel.swift; sourceTree = SOURCE_ROOT; };
 		D5B070DE2B41866D00DA2D34 /* MainResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultCell.swift; sourceTree = "<group>"; };
-		D5B070E02B41872100DA2D34 /* BmiResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BmiResultModel.swift; path = BMICalculator/Main/View/Cells/BmiResultModel.swift; sourceTree = SOURCE_ROOT; };
 		D5B070E22B41945C00DA2D34 /* AboutBMIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBMIController.swift; sourceTree = "<group>"; };
 		D5DB21992B384B8700CADF08 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +94,7 @@
 		8A5B04992B4070960049C6C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D5B070DC2B4169C500DA2D34 /* MainViewModel.swift */,
-				D5B070E02B41872100DA2D34 /* BmiResultModel.swift */,
+				D5B070DC2B4169C500DA2D34 /* MainModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +111,7 @@
 		8A5B049B2B40709E0049C6C6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8A3D6EE82B42F70B00C57281 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 				8A8D8CFB2B35C25400AEE529 /* UIFont.swift */,
 				D5DB21992B384B8700CADF08 /* UIButton.swift */,
 				8ADC62F22B3A999C00F76743 /* UITextField.swift */,
+				8A3D6EEB2B4300B700C57281 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3D6EEA2B43007000C57281 /* MainViewModel.swift in Sources */,
 				8ADC62F72B3AA60600F76743 /* GenderPicker.swift in Sources */,
 				8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */,
 				8A8D8D022B35C25400AEE529 /* OnboardingViewModel.swift in Sources */,
@@ -363,7 +367,7 @@
 				8A8D8D052B35C25400AEE529 /* String.swift in Sources */,
 				8A5B049D2B4070B80049C6C6 /* MainViewController.swift in Sources */,
 				8A63F75D2B3876C8000F1A03 /* Calculation.swift in Sources */,
-				D5B070E12B41872100DA2D34 /* BmiResultModel.swift in Sources */,
+				8A3D6EEC2B4300B700C57281 /* Double.swift in Sources */,
 				8A8D8D032B35C25400AEE529 /* OnboardingViewController.swift in Sources */,
 				8A8D8CDD2B35C1F100AEE529 /* BMICalculator.xcdatamodeld in Sources */,
 				D5B070E32B41945C00DA2D34 /* AboutBMIController.swift in Sources */,
@@ -373,7 +377,7 @@
 				D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */,
 				8AAF89802B405D2900B4EBDA /* CoreDB.swift in Sources */,
 				8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */,
-				D5B070DD2B4169C500DA2D34 /* MainViewModel.swift in Sources */,
+				D5B070DD2B4169C500DA2D34 /* MainModel.swift in Sources */,
 				8A8D8CD52B35C1F100AEE529 /* SceneDelegate.swift in Sources */,
 				8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */,
 				8A5B04A22B4072CB0049C6C6 /* MainCollectionPersonViewCell.swift in Sources */,

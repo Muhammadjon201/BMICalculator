@@ -15,31 +15,36 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
     var viewModel: MainPageModel? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
-
-            userFullName.text = viewModel.fullName
-            score.text = viewModel.score
-            scoreLabel.text = viewModel.scoreLabel
-            personImageView.image = UIImage(named: viewModel.personImage)
-            // Set other labels accordingly
-
-            ageNumberLabel.text = viewModel.age
-            ageYearsLabel.text = viewModel.ageYears
-            ageLabel.text = viewModel.ageLbl
-
-            heightNumberLabel.text = viewModel.height
-            heightCmLabel.text = viewModel.heightCm
-            heightLabel.text = viewModel.heightLbl
-
-            weightNumberLabel.text = viewModel.kgNumber
-            weightKgLabel.text = viewModel.kgKg
-            weightLabel.text = viewModel.kgWeight
+            self.ageNumberLabel.text = viewModel.age
+            self.heightNumberLabel.text = viewModel.height
+            self.weightNumberLabel.text = viewModel.weight
+            self.userFullName.text = viewModel.fullName
+            switch viewModel.BMIType {
+            case .underweight(let score, let _):
+                self.score.text = "\(score)"
+            case .normalWeight(let score, let _):
+                self.score.text = "\(score)"
+            case .overweight(let score, let _):
+                self.score.text = "\(score)"
+            case .obesity(let type):
+                switch type {
+                case .first(let score, let _):
+                    self.score.text = "\(score)"
+                case .second(let score, let _):
+                    self.score.text = "\(score)"
+                case .third(let score, let _):
+                    self.score.text = "\(score)"
+                }
+            case .error:
+                break
+            }
         }
     }
 
     
     private let userFullName: UILabel = {
         let label = UILabel()
-        label.font = .setFont(forTextStyle: .title3, weight: .heavy)
+        label.font = .setFont(forTextStyle: .title1, weight: .heavy)
         label.textColor = .white
         label.numberOfLines = 2
         return label
@@ -56,13 +61,14 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .body, weight: .regular)
         label.textColor = .white
+        label.text = "BMI Score"
         return label
     }()
     
     private let personImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "human")
+        imageView.image = UIImage(named: "human")?.withRenderingMode(.alwaysTemplate)
         imageView.tintColor = .white
         return imageView
     }()
@@ -78,6 +84,7 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .title3, weight: .heavy)
         label.textColor = .white
+        label.text = "yrs"
         return label
     }()
     
@@ -85,6 +92,7 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .body, weight: .regular)
         label.textColor = .white
+        label.text = "Age"
         return label
     }()
     
@@ -105,6 +113,7 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .title3, weight: .heavy)
         label.textColor = .white
+        label.text = "cm"
         return label
     }()
     
@@ -112,6 +121,7 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .body, weight: .regular)
         label.textColor = .white
+        label.text = "Height"
         return label
     }()
     
@@ -126,6 +136,7 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .title3, weight: .heavy)
         label.textColor = .white
+        label.text = "kg"
         return label
     }()
     
@@ -133,6 +144,7 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .body, weight: .regular)
         label.textColor = .white
+        label.text = "Weight"
         return label
     }()
     
@@ -186,16 +198,16 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
         }
         
         scoreStackView.snp.makeConstraints { make in
+            make.top.equalTo(userFullName.snp.bottom).offset(Constants.topPadding)
             make.left.equalTo(30)
-            make.centerY.equalToSuperview()
         }
         
         personImageView.snp.makeConstraints { make in
             make.top.equalTo(Constants.topPadding)
             make.left.equalTo(userFullName.snp.right).offset(Constants.sidePadding)
             make.right.equalTo(-Constants.sidePadding)
-            make.width.equalTo(100)
-            make.height.equalTo(150)
+            make.width.equalTo(130)
+            make.height.equalTo(180)
         }
         
         ageLabel.snp.makeConstraints { make in

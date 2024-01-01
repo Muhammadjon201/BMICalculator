@@ -10,14 +10,34 @@ import SnapKit
 
 class MainResultCell: UICollectionViewCell {
     
-    var viewModel: BmiResultModel? {
+    var viewModel: MainPageModel? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
-            
-            bmiResultLabel.text = viewModel.resultLabel
-            bmiResultNumber.text = viewModel.resultNumber
-            resultDefinition.text = viewModel.resultDefinition
-            
+            switch viewModel.BMIType {
+            case .underweight(let score, let message):
+                self.bmiResultNumber.text = "\(score)"
+                self.bmiResultLabel.text = "\(message)"
+            case .normalWeight(let score, let message):
+                self.bmiResultNumber.text = "\(score)"
+                self.bmiResultLabel.text = "\(message)"
+            case .overweight(let score, let message):
+                self.bmiResultNumber.text = "\(score)"
+                self.bmiResultLabel.text = "\(message)"
+            case .obesity(let type):
+                switch type {
+                case .first(let score, let message):
+                    self.bmiResultNumber.text = "\(score)"
+                    self.bmiResultLabel.text = "\(message)"
+                case .second(let score, let message):
+                    self.bmiResultNumber.text = "\(score)"
+                    self.bmiResultLabel.text = "\(message)"
+                case .third(let score, let message):
+                    self.bmiResultNumber.text = "\(score)"
+                    self.bmiResultLabel.text = "\(message)"
+                }
+            case .error:
+                break
+            }
         }
     }
     
@@ -41,6 +61,7 @@ class MainResultCell: UICollectionViewCell {
         textView.backgroundColor = .black
         textView.font = .setFont(forTextStyle: .body, weight: .regular)
         textView.isEditable = false
+        textView.text = "If your BMI falls below the range of 18.5, it indicates that you are underweight. Being underweight may suggest a variety of health concerns, including insufficient nutrition, potential malnutrition, or other underlying health issues"
         return textView
     }()
     

@@ -14,6 +14,8 @@ class CoreDB {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func addUser(name: String, age: String, gender: String, height: String, weight: String) {
+        self.deleteAllUsers()
+        
         let user = User(context: context)
         user.name = name
         user.age = age

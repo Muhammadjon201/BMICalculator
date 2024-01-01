@@ -8,13 +8,29 @@
 import UIKit
 import SnapKit
 
+protocol MainViewModelType {
+    func selectUser() -> User
+}
+
+enum BMITypes {
+    case underweight(score: Double, message: String)
+    case normalWeight(score: Double, message: String)
+    case overweight(score: Double, message: String)
+    case obesity(type: ObesityTypes)
+    case error
+}
+
+enum ObesityTypes {
+    case first(score: Double, message: String)
+    case second(score: Double, message: String)
+    case third(score: Double, message: String)
+}
+
 class MainViewController: UIViewController {
     
+    var viewModel: MainViewModelType = MainViewModel()
+    var userData: User!
     let appNameAttText = NSMutableAttributedString()
-    
-    let infos = MainPageModel(fullName: "MUHAMMADJON", score: "20", scoreLabel: "BMI Score", personImage: "human", age: "24", ageYears: "yrs", ageLbl: "Age", height: "176", heightCm: "cm", heightLbl: "height", kgNumber: "75", kgKg: "kg", kgWeight: "weight")
-    
-    let bmiResult = BmiResultModel(resultLabel: "Underweight", resultNumber: "(BMI less than 18.5)", resultDefinition: "If your BMI falls below the range of 18.5, it indicates that you are underweight. Being underweight may suggest a variety of health concerns, including insufficient nutrition, potential malnutrition, or other underlying health issues")
     
     private let appName: UILabel = {
         let label = UILabel()
@@ -55,6 +71,13 @@ class MainViewController: UIViewController {
         return collectionView
     }()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.userData = viewModel.selectUser()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,8 +95,6 @@ class MainViewController: UIViewController {
         
         appNameConfig()
         layout()
-        
-        self.navigationItem.setHidesBackButton(true, animated: true)
 
     }
     
@@ -121,7 +142,7 @@ extension MainViewController {
     }
     
     @objc func recalculateTapped(){
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.pushViewController(CalculateViewController(), animated: true)
     }
     
 }
@@ -132,15 +153,23 @@ extension MainViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let viewModel = MainPageModel(
+            fullName: self.userData.name ?? "",
+            BMIType: BMICalculation(height: self.userData.height ?? "", weight: self.userData.weight ?? ""),
+            age: self.userData.age ?? "",
+            height: self.userData.height ?? "",
+            weight: self.userData.weight ?? "")
+        
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionPersonViewCell", for: indexPath) as! MainCollectionPersonViewCell
-            cell.viewModel = infos
+            cell.viewModel = viewModel
     
         return cell
 
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainResultCell", for: indexPath) as! MainResultCell
-            cell.viewModel = bmiResult
+            cell.viewModel = viewModel
             
             return cell
         }
@@ -150,4 +179,34 @@ extension MainViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let cellWidth = collectionView.bounds.width - 30
         return CGSize(width: cellWidth, height: 300)
     }
+    
+    
+    private func BMICalculation(height: String, weight: String) -> BMITypes {
+        guard var height = Double(height) else { return BMITypes.error }
+        guard let weight = Double(weight) else { return BMITypes.error }
+        height = height / 100
+        var score = weight / (height * height)
+        score = score.rounded(toDecimal: 2)
+        
+        switch score {
+        case 0...18.4:
+            return BMITypes.underweight(score: score, message: "BMI less than 18.5")
+        case 18.5...24.9:
+            return BMITypes.normalWeight(score: score, message: "BMI between 18.5 and 24.9")
+        case 25.0...29.9:
+            return BMITypes.overweight(score: score, message: "BMI between 25 and 29.9")
+        case 30.0...34.9:
+            return BMITypes.obesity(type: .first(score: score, message: "Class I (Moderate obesity): BMI between 30 and 34.9"))
+        case 35.0...39.9:
+            return BMITypes.obesity(type: .second(score: score, message: "Class II (Severe obesity): BMI between 35 and 39.9"))
+        case 40.0...100.0:
+            return BMITypes.obesity(type: .third(score: score, message: "Class III (Very severe or morbid obesity): BMI of 40 and above"))
+        default:
+            break
+        }
+        
+        return BMITypes.error
+        
+    }
+    
 }
