@@ -97,6 +97,9 @@ class CalculateViewController: UIViewController {
         layout()
         
         viewModel.selectUser()
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
     }
     
     private func appNameConfig(){
@@ -178,6 +181,45 @@ class CalculateViewController: UIViewController {
 
 extension CalculateViewController {
     
+//    @objc
+//    func confirmDidClick() {
+//        guard let name = self.nameTextField.text else { return }
+//        guard let age = self.ageTextField.text else { return }
+//        guard let height = self.heightTextField.text else { return }
+//        guard let weight = self.weightTextField.text else { return }
+//        let gender = self.genderPicker.selectedGender
+//        
+//        if name.isEmpty {
+//            self.nameTextField.emptyError()
+//        }
+//        if age.isEmpty {
+//            self.ageTextField.emptyError()
+//        }
+//        if height == "0" {
+//            self.heightTextField.emptyError()
+//        }
+//        if weight == "0" {
+//            self.weightTextField.emptyError()
+//        }
+//        if gender == nil {
+//            self.genderPicker.emptyError()
+//        }
+//        
+//        if name.isEmpty == false &&
+//        age.isEmpty == false &&
+//        height != "0" &&
+//        weight != "0" &&
+//        gender != nil {
+//            viewModel.saveUserToDB(
+//                name: name,
+//                age: age,
+//                gender: gender!,
+//                height: height,
+//                weight: weight)
+//        }
+//        
+//    }
+    
     @objc
     func confirmDidClick() {
         guard let name = self.nameTextField.text else { return }
@@ -203,18 +245,28 @@ extension CalculateViewController {
         }
         
         if name.isEmpty == false &&
-        age.isEmpty == false &&
-        height != "0" &&
-        weight != "0" &&
-        gender != nil {
+            age.isEmpty == false &&
+            height != "0" &&
+            weight != "0" &&
+            gender != nil {
+            
             viewModel.saveUserToDB(
                 name: name,
                 age: age,
                 gender: gender!,
                 height: height,
                 weight: weight)
+            
+            // Assuming you have access to a navigation controller
+            if let navigationController = navigationController {
+                // Create an instance of your main view controller
+                let mainViewController = MainViewController()
+                
+                // Push the main view controller onto the navigation stack
+                navigationController.pushViewController(mainViewController, animated: true)
+            }
         }
-        
     }
+
     
 }
