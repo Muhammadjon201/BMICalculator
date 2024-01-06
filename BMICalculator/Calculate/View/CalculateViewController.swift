@@ -46,7 +46,7 @@ class CalculateViewController: UIViewController {
     }()
     
     private let ageTextField: CustomTextField = {
-        let textfield = CustomTextField(title: "Date of Birth")
+        let textfield = CustomTextField(title: "Age")
         textfield.backgroundColor = .systemGray6
         return textfield
     }()
