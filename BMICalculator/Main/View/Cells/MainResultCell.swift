@@ -38,6 +38,7 @@ class MainResultCell: UICollectionViewCell {
                     updateResultDefinitionLabel(description: "Your BMI is in the range of 35 to 39.9, classified as Class II (Severe obesity). Consider consulting with a healthcare professional to manage your weight.")
                 case .third(let score, let message):
                     updateLabels(score: score, message: message)
+                    updateBmiResultNumberColor(color: .red)
                     updateResultDefinitionLabel(description: "Your BMI is 40 or above, classified as Class III (Very severe or morbid obesity). It's crucial to seek medical advice for weight management and overall health.")
                 }
             case .error:
@@ -49,6 +50,7 @@ class MainResultCell: UICollectionViewCell {
     private let bmiResultLabel: UILabel = {
         let label = UILabel()
         label.font = .setFont(forTextStyle: .title3, weight: .heavy)
+        label.numberOfLines = 2
         label.textColor = .white
         return label
     }()
@@ -88,6 +90,7 @@ class MainResultCell: UICollectionViewCell {
         bmiResultLabel.snp.makeConstraints { make in
             make.top.equalTo(Constants.topPadding)
             make.left.equalTo(Constants.sidePadding)
+            make.right.equalTo(-Constants.sidePadding)
         }
         
         bmiResultNumber.snp.makeConstraints { make in
