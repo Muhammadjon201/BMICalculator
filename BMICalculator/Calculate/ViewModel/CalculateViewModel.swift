@@ -10,6 +10,7 @@ import UIKit
 class CalculateViewModel: CalculateViewModelType {
     
     var CoreData: CoreDB? = CoreDB()
+    var defaults = UserDefaults.standard
     
     func saveUserToDB(name: String, age: String, gender: Gender, height: String, weight: String) {
         let gender = gender == .male ? "male" : "female"
@@ -19,6 +20,10 @@ class CalculateViewModel: CalculateViewModelType {
     
     func selectUser() {
         print(CoreData?.selectAll()?.name)
+    }
+    
+    func userLoggedIn() {
+        defaults.setValue(true, forKey: KeyDefaults.login)
     }
     
 }

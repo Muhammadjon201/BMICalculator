@@ -17,7 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        
+        let hasUserLogged = UserDefaults.standard.bool(forKey: KeyDefaults.login)
+        if hasUserLogged {
+            window?.rootViewController = UINavigationController(rootViewController: MainViewController())
+        } else {
+            window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController())
+        }
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

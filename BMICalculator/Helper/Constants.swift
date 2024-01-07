@@ -16,3 +16,8 @@ struct Constants {
     static let largePadding: CGFloat = 40
     static let buttonHeight: CGFloat = 50 // used for text fields as well
 }
+
+
+struct KeyDefaults {
+    static let login = "userLogin"
+}
