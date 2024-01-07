@@ -61,7 +61,7 @@ class MainViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = Constants.topPadding
-        layout.sectionInset = UIEdgeInsets(top: 0, left: Constants.sidePadding, bottom: 0, right: Constants.sidePadding)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: Constants.sidePadding, bottom: Constants.buttonHeight + 20, right: Constants.sidePadding)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(MainCollectionPersonViewCell.self, forCellWithReuseIdentifier: "MainCollectionPersonViewCell")
         collectionView.register(MainResultCell.self, forCellWithReuseIdentifier: "MainResultCell")
@@ -117,9 +117,9 @@ class MainViewController: UIViewController {
         }
         
         recalculateButton.snp.makeConstraints { make in
-            make.left.equalTo(Constants.sidePadding)
-            make.right.equalTo(-Constants.sidePadding)
-            make.bottom.equalTo(-Constants.topPadding)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-Constants.minorPadding)
+            make.leading.equalToSuperview().offset(Constants.sidePadding)
+            make.trailing.equalToSuperview().offset(-Constants.sidePadding)
             make.height.equalTo(Constants.buttonHeight)
         }
     }

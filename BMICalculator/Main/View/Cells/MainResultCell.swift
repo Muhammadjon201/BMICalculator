@@ -57,7 +57,7 @@ class MainResultCell: UICollectionViewCell {
     
     private let bmiResultNumber: UILabel = {
         let label = UILabel()
-        label.font = .setFont(forTextStyle: .body, weight: .regular)
+        label.font = .setFont(forTextStyle: .title1, weight: .semibold)
         label.textColor = .green
         return label
     }()
