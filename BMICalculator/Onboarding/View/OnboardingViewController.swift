@@ -91,8 +91,8 @@ class OnboardingViewController: UIViewController {
         appNameAttText.normal("Calculator", textColor: .cBlack, font: .setFont(forTextStyle: .title3, weight: .medium), space: " ")
         self.appName.attributedText = appNameAttText
         
-        taglineAttText.normal("Unveiling the Secrets", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .bold))
-        taglineAttText.normal("of Your Body's Balance!", textColor: .white, font: .setFont(forTextStyle: .largeTitle, weight: .regular), space: " ")
+        taglineAttText.normal("Unveiling the Secrets", textColor: .white, font: .setFont(forTextStyle: .title2, weight: .bold))
+        taglineAttText.normal("of Your Body's Balance!", textColor: .white, font: .setFont(forTextStyle: .title2, weight: .regular), space: " ")
         self.tagline.attributedText = taglineAttText
     }
     
