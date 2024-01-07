@@ -84,7 +84,6 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        self.navigationItem.setHidesBackButton(true, animated: true)
         appNameConfig()
         
         view.addSubview(scrollView)
@@ -97,8 +96,6 @@ class CalculateViewController: UIViewController {
         layout()
         
         viewModel.selectUser()
-        
-        self.navigationItem.setHidesBackButton(true, animated: true)
 
     }
     

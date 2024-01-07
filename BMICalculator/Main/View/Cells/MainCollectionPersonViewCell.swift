@@ -20,19 +20,19 @@ class MainCollectionPersonViewCell: UICollectionViewCell {
             self.weightNumberLabel.text = viewModel.weight
             self.userFullName.text = viewModel.fullName
             switch viewModel.BMIType {
-            case .underweight(let score, let _):
+            case .underweight(let score, _):
                 self.score.text = "\(score)"
-            case .normalWeight(let score, let _):
+            case .normalWeight(let score, _):
                 self.score.text = "\(score)"
-            case .overweight(let score, let _):
+            case .overweight(let score, _):
                 self.score.text = "\(score)"
             case .obesity(let type):
                 switch type {
-                case .first(let score, let _):
+                case .first(let score, _):
                     self.score.text = "\(score)"
-                case .second(let score, let _):
+                case .second(let score, _):
                     self.score.text = "\(score)"
-                case .third(let score, let _):
+                case .third(let score, _):
                     self.score.text = "\(score)"
                 }
             case .error:

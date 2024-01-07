@@ -99,7 +99,6 @@ class MainViewController: UIViewController {
     }
     
     private func layout() {
-        
         appName.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.left.equalToSuperview().offset(Constants.sidePadding)
@@ -114,13 +113,13 @@ class MainViewController: UIViewController {
             make.top.equalTo(appName.snp.bottom).offset(Constants.topPadding)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-Constants.topPadding)
         }
         
         recalculateButton.snp.makeConstraints { make in
             make.left.equalTo(Constants.sidePadding)
             make.right.equalTo(-Constants.sidePadding)
-            make.bottom.equalTo(-20)
+            make.bottom.equalTo(-Constants.topPadding)
             make.height.equalTo(Constants.buttonHeight)
         }
     }

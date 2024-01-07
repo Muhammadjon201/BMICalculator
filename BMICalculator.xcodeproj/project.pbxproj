@@ -22,6 +22,7 @@
 		8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF92B35C25400AEE529 /* UIColor.swift */; };
 		8A8D8D052B35C25400AEE529 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFA2B35C25400AEE529 /* String.swift */; };
 		8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFB2B35C25400AEE529 /* UIFont.swift */; };
+		8A950F282B49B344003F6ECE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8A950F272B49B344003F6ECE /* SnapKit */; };
 		8AAF89802B405D2900B4EBDA /* CoreDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF897F2B405D2900B4EBDA /* CoreDB.swift */; };
 		8AAF89822B40600800B4EBDA /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF89812B40600800B4EBDA /* CalculateViewModel.swift */; };
 		8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F02B3A987500F76743 /* CustomTextField.swift */; };
@@ -31,8 +32,6 @@
 		D5B070DD2B4169C500DA2D34 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DC2B4169C500DA2D34 /* MainModel.swift */; };
 		D5B070DF2B41866D00DA2D34 /* MainResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DE2B41866D00DA2D34 /* MainResultCell.swift */; };
 		D5B070E32B41945C00DA2D34 /* AboutBMIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070E22B41945C00DA2D34 /* AboutBMIController.swift */; };
-		D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A59F2B36C98000DED5FA /* SnapKit */; };
-		D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */; };
 		D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB21992B384B8700CADF08 /* UIButton.swift */; };
 		D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,8 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */,
-				D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */,
+				8A950F282B49B344003F6ECE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +298,7 @@
 			);
 			name = BMICalculator;
 			packageProductDependencies = (
-				D5B8A59F2B36C98000DED5FA /* SnapKit */,
-				D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */,
+				8A950F272B49B344003F6ECE /* SnapKit */,
 			);
 			productName = BMICalculator;
 			productReference = 8A8D8CCF2B35C1F100AEE529 /* BMICalculator.app */;
@@ -332,7 +329,7 @@
 			);
 			mainGroup = 8A8D8CC62B35C1F100AEE529;
 			packageReferences = (
-				D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8A950F262B49B344003F6ECE /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 8A8D8CD02B35C1F100AEE529 /* Products */;
 			projectDirPath = "";
@@ -516,7 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SQB47CP5D4;
+				DEVELOPMENT_TEAM = N5PZ9NLSBU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -544,7 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SQB47CP5D4;
+				DEVELOPMENT_TEAM = N5PZ9NLSBU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -589,26 +586,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		8A950F262B49B344003F6ECE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D5B8A59F2B36C98000DED5FA /* SnapKit */ = {
+		8A950F272B49B344003F6ECE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 8A950F262B49B344003F6ECE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 
