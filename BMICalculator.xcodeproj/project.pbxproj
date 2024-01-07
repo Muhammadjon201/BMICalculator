@@ -28,11 +28,10 @@
 		8ADC62F32B3A999C00F76743 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F22B3A999C00F76743 /* UITextField.swift */; };
 		8ADC62F52B3A9C7D00F76743 /* StepperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F42B3A9C7D00F76743 /* StepperTextField.swift */; };
 		8ADC62F72B3AA60600F76743 /* GenderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F62B3AA60600F76743 /* GenderPicker.swift */; };
+		D50A45D42B49B443003D7A7A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D50A45D32B49B443003D7A7A /* SnapKit */; };
 		D5B070DD2B4169C500DA2D34 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DC2B4169C500DA2D34 /* MainModel.swift */; };
 		D5B070DF2B41866D00DA2D34 /* MainResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070DE2B41866D00DA2D34 /* MainResultCell.swift */; };
 		D5B070E32B41945C00DA2D34 /* AboutBMIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B070E22B41945C00DA2D34 /* AboutBMIController.swift */; };
-		D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A59F2B36C98000DED5FA /* SnapKit */; };
-		D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */; };
 		D5DB219A2B384B8700CADF08 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB21992B384B8700CADF08 /* UIButton.swift */; };
 		D5DB219C2B38D72000CADF08 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB219B2B38D72000CADF08 /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,8 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5B8A5A02B36C98000DED5FA /* SnapKit in Frameworks */,
-				D5B8A5A22B36C98000DED5FA /* SnapKit-Dynamic in Frameworks */,
+				D50A45D42B49B443003D7A7A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +298,7 @@
 			);
 			name = BMICalculator;
 			packageProductDependencies = (
-				D5B8A59F2B36C98000DED5FA /* SnapKit */,
-				D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */,
+				D50A45D32B49B443003D7A7A /* SnapKit */,
 			);
 			productName = BMICalculator;
 			productReference = 8A8D8CCF2B35C1F100AEE529 /* BMICalculator.app */;
@@ -332,7 +329,7 @@
 			);
 			mainGroup = 8A8D8CC62B35C1F100AEE529;
 			packageReferences = (
-				D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D50A45D22B49B443003D7A7A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 8A8D8CD02B35C1F100AEE529 /* Products */;
 			projectDirPath = "";
@@ -515,14 +512,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SQB47CP5D4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "BMI Calculator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,9 +530,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyclone.BMICalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -543,14 +544,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SQB47CP5D4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "BMI Calculator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -559,9 +562,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cyclone.BMICalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -589,26 +594,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		D50A45D22B49B443003D7A7A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 5.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D5B8A59F2B36C98000DED5FA /* SnapKit */ = {
+		D50A45D32B49B443003D7A7A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = D50A45D22B49B443003D7A7A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		D5B8A5A12B36C98000DED5FA /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D5B8A59E2B36C98000DED5FA /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 
