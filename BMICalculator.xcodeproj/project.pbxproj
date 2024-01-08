@@ -22,7 +22,6 @@
 		8A8D8D042B35C25400AEE529 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CF92B35C25400AEE529 /* UIColor.swift */; };
 		8A8D8D052B35C25400AEE529 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFA2B35C25400AEE529 /* String.swift */; };
 		8A8D8D062B35C25400AEE529 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8CFB2B35C25400AEE529 /* UIFont.swift */; };
-		8A950F282B49B344003F6ECE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8A950F272B49B344003F6ECE /* SnapKit */; };
 		8AAF89802B405D2900B4EBDA /* CoreDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF897F2B405D2900B4EBDA /* CoreDB.swift */; };
 		8AAF89822B40600800B4EBDA /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF89812B40600800B4EBDA /* CalculateViewModel.swift */; };
 		8ADC62F12B3A987500F76743 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC62F02B3A987500F76743 /* CustomTextField.swift */; };
@@ -83,6 +82,7 @@
 		8A5B04982B4070880049C6C6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D5B070E22B41945C00DA2D34 /* AboutBMIController.swift */,
 				8A5B04992B4070960049C6C6 /* Model */,
 				8A5B049A2B40709A0049C6C6 /* View */,
 				8A5B049B2B40709E0049C6C6 /* ViewModel */,
@@ -277,7 +277,6 @@
 		D5B070E42B41947C00DA2D34 /* AboutBMI */ = {
 			isa = PBXGroup;
 			children = (
-				D5B070E22B41945C00DA2D34 /* AboutBMIController.swift */,
 			);
 			path = AboutBMI;
 			sourceTree = "<group>";
@@ -512,8 +511,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = SQB47CP5D4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
@@ -544,8 +544,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = SQB47CP5D4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BMICalculator/Info.plist;
